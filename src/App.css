@@ -45,7 +45,7 @@
 
 /* Skills Section */
 .skills-section {
-  padding: 3rem 1rem;
+  padding: 5rem 1rem;
   background: url('./icons/javascript.svg') no-repeat center center;
   background-size: cover;
   color: #fff;
@@ -83,7 +83,7 @@
 }
 
 .skills-list span:hover {
-  color: #ffa38d;
+  color: #000;
   transform: scale(1.2);
 }
 
@@ -96,7 +96,7 @@
 }
 
 .animated-image {
-  height: 150px;
+  height: 200px;
   margin: 0 20px;
   animation: float 4s ease-in-out infinite;
 }
@@ -113,8 +113,8 @@
 
 /* Contact your boy Section */
 .contact-section {
+  height: 20%;
   padding: 3rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   text-align: center;
   position: relative;
@@ -136,12 +136,11 @@
 
 .contact-section input,
 .contact-section textarea {
-  width: 80%;
+  width: 60%;
   padding: 0.8rem;
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -154,18 +153,19 @@
 }
 
 .contact-section button {
-  padding: 0.8rem 2rem;
-  background-color: #ffa38d;
+  padding: 0.8rem 8rem;
+  background-color: rgba(255, 255, 255, 0.5);
   color: #333;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact-section button:hover {
-  background-color: #ff8566;
+  background-color: #333;
+  color:#ffa38d;
   transform: scale(1.05);
 }
 
@@ -185,15 +185,40 @@
   animation: fadeIn 1.2s ease-out;
 }
 
-/* Gradient Background for Contact Section */
-.contact-section {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(255, 165, 141, 0.2));
+
+
+.project-details div {
+  width: 50%; /* Ensure the canvas fits within the box */
+  height: 600px; /* Set a height for the canvas */
+}
+
+.projects-section {
+  background: linear-gradient(to bottom, #1a1a1a, #333); /* Dark to lighter gradient */
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.project-box {
+  background-color: rgba(255, 255, 255, 0.185); /* Slightly transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  margin: 25px;
+  padding: 25px;
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.project-box:hover {
+  transform: scale(1.02); /* Slightly enlarge the box on hover */
 }
 
 
 
-/* Gradient Styling */
-body {
-  background: linear-gradient(to bottom right, #333, #fff, );
+.jack-in-the-box {
+  width: 50px;  /* Set the width of the container */
+  height: 40px; /* Set the height of the container */
+  float: right;
 }
+
 
