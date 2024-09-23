@@ -5,6 +5,21 @@ import { Tween, update as TWEENUpdate } from '@tweenjs/tween.js';
 const Avatar = () => {
   const containerRef = useRef(null);
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowUp' || event.key === 'ArrowDown') {
+      event.preventDefault(); // Prevent scrolling
+      // Add your movement logic here if needed
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   useEffect(() => {
     const scene = new THREE.Scene();
     const aspectRatio = window.innerWidth / window.innerHeight;
@@ -12,7 +27,7 @@ const Avatar = () => {
     camera.position.z = 500;
 
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth / 1.8, window.innerHeight / 1.9);
     renderer.setClearColor(0xffffff); // Set background to white
     containerRef.current.appendChild(renderer.domElement);
 
@@ -25,36 +40,35 @@ const Avatar = () => {
     const avatar = new THREE.Mesh(body, cover);
     marker.add(avatar);
 
-    const hand = new THREE.SphereGeometry(50);
-    const rightHand = new THREE.Mesh(hand, cover);
+    const handGeometry = new THREE.SphereGeometry(50);
+    const rightHand = new THREE.Mesh(handGeometry, cover);
     rightHand.position.set(-150, 0, 0);
     avatar.add(rightHand);
 
-    const leftHand = new THREE.Mesh(hand, cover);
+    const leftHand = new THREE.Mesh(handGeometry, cover);
     leftHand.position.set(150, 0, 0);
     avatar.add(leftHand);
 
-    const foot = new THREE.SphereGeometry(50);
-    const rightFoot = new THREE.Mesh(foot, cover);
+    const footGeometry = new THREE.SphereGeometry(50);
+    const rightFoot = new THREE.Mesh(footGeometry, cover);
     rightFoot.position.set(-75, -125, 0);
     avatar.add(rightFoot);
 
-    const leftFoot = new THREE.Mesh(foot, cover);
+    const leftFoot = new THREE.Mesh(footGeometry, cover);
     leftFoot.position.set(75, -125, 0);
     avatar.add(leftFoot);
 
-    const eyes = new THREE.SphereGeometry(25);
-    const rightEye = new THREE.Mesh(eyes, cover);
+    const eyeGeometry = new THREE.SphereGeometry(25);
+    const rightEye = new THREE.Mesh(eyeGeometry, cover);
     rightEye.position.set(-40, 25, 80);
     avatar.add(rightEye);
 
-    const leftEye = new THREE.Mesh(eyes, cover);
+    const leftEye = new THREE.Mesh(eyeGeometry, cover);
     leftEye.position.set(40, 25, 80);
     avatar.add(leftEye);
 
     marker.add(camera);
   
-    // ... rest of your code remains the same  
     function makeTreeAt(x, z) {
       const trunk = new THREE.Mesh(
         new THREE.CylinderGeometry(50, 50, 200),
@@ -88,7 +102,6 @@ const Avatar = () => {
       [1500, 0], [-1500, 0], [1750, -1000], [-1750, -1000],
       [2000, 0], [-2000, 0], [2250, -1000], [-2250, -1000]
     ].forEach(([x, z]) => makeTreeAt(x, z));
-
 
     let isMovingRight = false;
     let isMovingLeft = false;
@@ -146,13 +159,11 @@ const Avatar = () => {
       }
     }
 
-    animate();
-
     function isWalking() {
       return isMovingRight || isMovingLeft || isMovingForward || isMovingBack;
     }
 
-    document.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', (event) => {
       const code = event.keyCode;
       if (code === 37) {
         marker.position.x -= 5; // left
@@ -181,7 +192,7 @@ const Avatar = () => {
       }
     });
 
-    document.addEventListener('keyup', function (event) {
+    document.addEventListener('keyup', (event) => {
       const code = event.keyCode;
       if (code === 37) isMovingLeft = false;
       if (code === 38) isMovingForward = false;
@@ -202,9 +213,7 @@ const Avatar = () => {
     };
   }, []);
 
-  return (
-    <div className="jack-in-the-box" ref={containerRef} />
-  );
+  return <div className="jack-in-the-box" ref={containerRef} />;
 };
 
 export default Avatar;

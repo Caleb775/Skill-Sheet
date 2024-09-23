@@ -135,6 +135,7 @@
   animation: float 4s ease-in-out infinite;
 }
 
+/* Image Section Animation */
 @keyframes float {
   0%, 100% {
     transform: translateY(0);
@@ -222,7 +223,7 @@
   color: #ffa38d;
   transform: scale(1.05);
 }
-/* Animations */
+/* Contact Section Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -234,26 +235,22 @@
   }
 }
 
-.contact-section form {
-  animation: fadeIn 1.2s ease-out;
-}
 
 
 
-.project-details div {
-  width: 50%; /* Ensure the canvas fits within the box */
-  height: 600px; /* Set a height for the canvas */
-}
+
+/* this part of my css is for my projects section 
+where my avata.js and Solarsystem.js is rendered */
 
 .projects-section {
-  background: linear-gradient(to bottom, #1a1a1a, #333); /* Dark to lighter gradient */
+  background: linear-gradient(200deg, #9c9c9c, #1e1e1e, #9c9c9c); /* Dark to lighter gradient */
   padding: 10px;
   color: white;
   text-align: center;
 }
 
 .project-box {
-  background-color: rgba(255, 255, 255, 0.185); /* Slightly transparent white background */
+  background-color: linear-gradient(200deg, #9c9c9c, #1e1e1e, #9c9c9c); /* Slightly transparent white background */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
   border-radius: 10px; /* Rounded corners */
   margin: 25px;
@@ -263,18 +260,16 @@
 }
 
 .project-box:hover {
-  transform: scale(1.02); /* Slightly enlarge the box on hover */
+  transform: scale(1.01); /* Slightly enlarge the box on hover */
 }
 
-
+.project-details div {
+  width: 50%; /* Ensure the canvas fits within the box */
+  height: 450px; /* Set a height for the canvas */
+}
 
 .jack-in-the-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;  /* Set to 100% to occupy the full width of the container */
-  height: 100%; /* Set to 100% to occupy the full height of the container */
-  position: relative; /* Make it a positioned element */
+ padding: 1vw 38vh;
 }
 
 
