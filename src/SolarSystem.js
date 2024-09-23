@@ -5,6 +5,9 @@ const SolarSystem = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
+
+    const container = containerRef.current;
+
     // Set up the Three.js scene
     const scene = new THREE.Scene();
     const aspectRatio = containerRef.current.clientWidth / containerRef.current.clientHeight;
@@ -23,7 +26,7 @@ const SolarSystem = () => {
     // Set up the renderer
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth / 1.8, window.innerHeight / 1.9);
-    containerRef.current.appendChild(renderer.domElement); // Attach renderer to the container
+    container.appendChild(renderer.domElement); 
 
     let camera = aboveCam; // Start with the above camera
 
@@ -118,7 +121,7 @@ const SolarSystem = () => {
 
     return () => {
       renderer.dispose();
-      containerRef.current.removeChild(renderer.domElement);
+      container.removeChild(renderer.domElement);
     };
   }, []);
 

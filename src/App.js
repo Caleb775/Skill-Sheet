@@ -31,7 +31,7 @@ function AppContent() {
         <Link to="/about">About Me</Link>
         <Link to="/projects">Projects</Link>
         {location.pathname === '/' && ( // Toggle button only appears on Home page
-          <button onClick={toggleContact} className="toggle-btn">
+          <button onClick={toggleContact} className="toggle-btn button-style">
             {isContactInFront ? 'Back to Main' : 'Contact Me'}
           </button>
         )}
@@ -115,7 +115,7 @@ const ContactSection = ({ isContactInFront }) => {
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" className="button-style">Send Message</button>
         </form>
       </section>
     </div>

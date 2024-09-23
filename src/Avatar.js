@@ -21,6 +21,8 @@ const Avatar = () => {
   }, []);
 
   useEffect(() => {
+
+    const container = containerRef.current;
     const scene = new THREE.Scene();
     const aspectRatio = window.innerWidth / window.innerHeight;
     const camera = new THREE.PerspectiveCamera(75, aspectRatio, 1, 10000);
@@ -29,7 +31,7 @@ const Avatar = () => {
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth / 1.8, window.innerHeight / 1.9);
     renderer.setClearColor(0xffffff); // Set background to white
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
 
     const notAllowed = [];
     const marker = new THREE.Object3D();
@@ -168,6 +170,7 @@ const Avatar = () => {
       if (code === 37) {
         marker.position.x -= 5; // left
         isMovingLeft = true;
+        spinAvatar(-Math.PI / 2);
       }
       if (code === 38) {
         marker.position.z -= 5; // up
@@ -209,7 +212,7 @@ const Avatar = () => {
 
     return () => {
       renderer.dispose();
-      containerRef.current.removeChild(renderer.domElement);
+      container.removeChild(renderer.domElement);
     };
   }, []);
 

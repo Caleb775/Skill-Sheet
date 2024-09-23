@@ -1,9 +1,12 @@
 /* General Styling */
 .App {
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
   background: linear-gradient(135deg, #1e1e1e, #ffffff, #1e1e1e);
-  color: rgba(153, 138, 138, 0.9);
+  color: #ffa38d;
   min-height: 100vh;
   position: relative;
 }
@@ -23,6 +26,22 @@
 
 .toggle-btn:hover {
   background-color: #ff8772;
+}
+
+.button-style {
+  text-align: center;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  padding: 0.7rem 2rem; /* Adjust padding as needed */
+  border: none; /* Remove border if needed */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button-style:hover {
+  background-color: rgba(255, 165, 138, 0.7); /* Change hover color if needed */
 }
 
 /* Foreground and Background */
@@ -80,7 +99,7 @@
   bottom: 5vh;
   background: url('./icons/programmer.svg') no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: #ffa38d;
   position: relative;
   z-index: 1;
 }
@@ -177,6 +196,7 @@
 }
 
 .contact-section h2 {
+  
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1.5rem;
@@ -243,33 +263,185 @@
 where my avata.js and Solarsystem.js is rendered */
 
 .projects-section {
-  background: linear-gradient(200deg, #9c9c9c, #1e1e1e, #9c9c9c); /* Dark to lighter gradient */
-  padding: 10px;
-  color: white;
+  background: linear-gradient(200deg, #1e1e1e, #9c9c9c, #1e1e1e);
+  padding: 2rem;
+  color: #ffa38d;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  animation: pulse 20s infinite;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.projects-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Bitter', serif;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #ffa38d; /* Glow effect */
 }
 
 .project-box {
-  background-color: linear-gradient(200deg, #9c9c9c, #1e1e1e, #9c9c9c); /* Slightly transparent white background */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-  border-radius: 10px; /* Rounded corners */
-  margin: 25px;
-  padding: 25px;
-  transition: transform 0.3s; /* Smooth transition for hover effect */
-  cursor: pointer; /* Pointer cursor on hover */
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
 }
 
 .project-box:hover {
-  transform: scale(1.01); /* Slightly enlarge the box on hover */
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(255, 135, 114, 0.7); /* Stronger shadow */
+}
+
+.project-details {
+  padding: 1vh 37vh;;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden; /* Ensure hidden details don't overflow */
+}
+
+.project-details p {
+  display: flex;
+  justify-content: center;
+}
+
+.project-box.open .project-details {
+  opacity: 1;
+  max-height: 500px;
 }
 
 .project-details div {
-  width: 50%; /* Ensure the canvas fits within the box */
-  height: 450px; /* Set a height for the canvas */
+  width: 75%;
+  height: 450px;
 }
 
-.jack-in-the-box {
- padding: 1vw 38vh;
+.better-a {
+  font-size: 18px;
+  color: #ff8772;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
+.better-a:hover {
+  text-decoration: underline;
+  color: #ffaf80;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Styling */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  font-family: "Bitter", serif;
+  color: rgba(153, 138, 138, 0.9);
+}
+
+/* Specialize Section */
+.specialize {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.specialize h2 {
+  font-size: 2.5rem;
+  color: #ffa38d;
+  margin-bottom: 1.5rem;
+}
+
+.specialize p {
+  font-size: 1.3rem;
+  color: rgb(54, 49, 49);
+  margin-bottom: 2rem;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.icon {
+  font-size: 4rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffa38d;
+}
+
+.icon:hover {
+  transform: scale(1.3) rotate(20deg);
+  color: #ff8772;
+}
+
+/* About Me Section */
+.about-me {
+  background: rgba(41, 40, 40, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 4rem;
+  box-shadow: 0 4px 10px rgba(255,135,114, 0.8);
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  color: #ff8772;
+  margin-bottom: 1rem;
+}
+
+.about-me p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: rgb(54, 49, 49);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-icons {
+    gap: 1rem;
+  }
+  
+  .icon {
+    font-size: 3rem;
+  }
+
+  .about-me, .specialize {
+    padding: 1.5rem;
+  }
+}
