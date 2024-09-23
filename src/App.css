@@ -1,447 +1,428 @@
 /* General Styling */
 .App {
-  text-align: center;
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  background: linear-gradient(135deg, #1e1e1e, #ffffff, #1e1e1e);
-  color: #ffa38d;
-  min-height: 100vh;
-  position: relative;
+  text-align: center; /* Center text alignment for the app */
+  font-family: "Bitter", serif; /* Set the font family */
+  font-optical-sizing: auto; /* Enable optical sizing for better text rendering */
+  font-weight: 600; /* Set font weight to 600 */
+  font-style: normal; /* Set font style to normal */
+  background: linear-gradient(135deg, #1e1e1e, #ffffff, #1e1e1e); /* Create a gradient background */
+  color: #ffa38d; /* Set text color */
+  min-height: 100vh; /* Ensure minimum height fills the viewport */
+  position: relative; /* Positioning context for absolutely positioned elements */
 }
 
 /* Toggle Button */
 .toggle-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px 20px;
-  background-color: #ffa38d;
-  color: #333;
-  border: none;
-  cursor: pointer;
-  z-index: 10; /* Always on top */
+  position: absolute; /* Absolute positioning to place the button */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  padding: 10px 20px; /* Padding for button */
+  background-color: #ffa38d; /* Background color */
+  color: #333; /* Text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  z-index: 10; /* Ensure button is on top of other elements */
 }
 
 .toggle-btn:hover {
-  background-color: #ff8772;
+  background-color: #ff8772; /* Change background color on hover */
 }
 
 .button-style {
-  text-align: center;
-  font-family: "Bitter", serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
-  padding: 0.7rem 2rem; /* Adjust padding as needed */
-  border: none; /* Remove border if needed */
+  text-align: center; /* Center text within button */
+  font-family: "Bitter", serif; /* Set the font family */
+  font-optical-sizing: auto; /* Enable optical sizing */
+  font-weight: 600; /* Set font weight */
+  font-style: normal; /* Set font style */
+  padding: 0.7rem 2rem; /* Set padding */
+  border: none; /* Remove border */
   cursor: pointer; /* Change cursor to pointer */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .button-style:hover {
-  background-color: rgba(255, 165, 138, 0.7); /* Change hover color if needed */
+  background-color: rgba(255, 165, 138, 0.7); /* Change hover color */
 }
 
 /* Foreground and Background */
 .foreground-content {
-  z-index: 2;
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  z-index: 2; /* Ensure foreground content is above background */
+  opacity: 1; /* Fully visible */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
 .background-content {
-  z-index: 1;
-  opacity: 0.4;
-  transition: opacity 0.3s ease;
-  pointer-events: none; /* Prevent interaction with background content */
+  z-index: 1; /* Background content below foreground */
+  opacity: 0.4; /* Partially visible */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  pointer-events: none; /* Disable interaction with background */
 }
 
 /* Navbar Styling */
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  display: flex; /* Flexbox layout for navbar */
+  justify-content: space-evenly; /* Evenly distribute navbar items */
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+  padding: 1rem; /* Padding for navbar */
 }
+
 .navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem; /* Font size for links */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .navbar a:hover {
-  color: #ffa38d;
-  transform: scale(1.1);
+  color: #ffa38d; /* Change color on hover */
+  transform: scale(1.1); /* Scale up on hover */
 }
 
 /* Hero Section */
 .hero-section {
-  padding: 2rem 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  padding: 2rem 1rem; /* Padding for hero section */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for background */
 }
 
 .hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem; /* Font size for main title */
+  margin-bottom: 0.5rem; /* Margin below title */
 }
 
 .hero-section p {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Font size for paragraph */
 }
 
 /* Skills Section */
 .skills-section {
-  padding: 6.9rem 5rem;
-  bottom: 5vh;
-  background: url('./icons/programmer.svg') no-repeat center center;
-  background-size: cover;
-  color: #ffa38d;
-  position: relative;
-  z-index: 1;
+  padding: 6.9rem 5rem; /* Padding for skills section */
+  bottom: 5vh; /* Position from bottom */
+  background: url('./icons/programmer.svg') no-repeat center center; /* Background image */
+  background-size: cover; /* Cover background */
+  color: #ffa38d; /* Text color */
+  position: relative; /* Positioning context for child elements */
+  z-index: 1; /* Layering context */
 }
 
 .skills-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
 }
 
 .skills-content {
-  position: relative;
-  z-index: 2;
+  position: relative; /* Relative positioning for content */
+  z-index: 2; /* Above the background overlay */
 }
 
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: flex; /* Flexbox layout */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-around; /* Distribute evenly */
 }
 
 .skills-list span {
-  margin: 10px;
-  font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: transform 0.3s;
+  margin: 10px; /* Margin around each skill */
+  font-size: 1.2rem; /* Font size for skill text */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 10px 20px; /* Padding for skill item */
+  border-radius: 20px; /* Rounded corners */
+  transition: transform 0.3s; /* Smooth transition for scaling */
 }
 
 .skills-list span:hover {
-  color: #000;
-  transform: scale(1.2);
-  cursor: pointer;
+  color: #000; /* Change text color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+  cursor: pointer; /* Change cursor to pointer */
 }
 
 /* Image Section */
 .images-section {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center content */
+  align-items: center; /* Center vertically */
 }
 
 .animated-image {
-  height: 185px;
-  margin: 0 20px;
-  animation: float 4s ease-in-out infinite;
+  height: 185px; /* Height for images */
+  margin: 0 20px; /* Margin around images */
+  animation: float 4s ease-in-out infinite; /* Float animation */
 }
 
 /* Image Section Animation */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0); /* Start and end at original position */
   }
   50% {
-    transform: translateY(-25px);
+    transform: translateY(-25px); /* Move up in the middle of the animation */
   }
 }
-
-
 
 /* Contact Section Overlay */
 .contact-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 0;
+  position: absolute; /* Absolute positioning for overlay */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  pointer-events: none; /* Disable interaction with background */
+  z-index: 0; /* Below other content */
 }
 
 .contact-container.in-front {
-  z-index: 5;
-  pointer-events: all;
+  z-index: 5; /* Bring to front when active */
+  pointer-events: all; /* Enable interaction */
 }
 
 /* Contact Section */
 .contact-section {
-  width: 100%;
-  padding: .5rem 1rem;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.4); /* Slight background for better visibility */
-  text-align: center;
-  position: relative;
+  width: 100%; /* Full width */
+  padding: .5rem 1rem; /* Padding for contact section */
+  backdrop-filter: blur(5px); /* Blur effect for background */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  text-align: center; /* Center text */
+  position: relative; /* Positioning context */
 }
 
 .contact-section h2 {
-  
-  font-size: 2.5rem;
-  color: #fff;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem; /* Font size for contact heading */
+  color: #fff; /* Text color */
+  margin-bottom: 1.5rem; /* Margin below heading */
 }
 
 .contact-section form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+  display: flex; /* Flexbox layout for form */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements */
+  gap: 1rem; /* Space between form elements */
 }
 
 .contact-section input,
 .contact-section textarea {
-  width: 60%;
-  padding: 0.8rem;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  font-size: 1rem;
-  transition: all 0.3s ease;
+  width: 60%; /* Set width for inputs */
+  padding: 0.8rem; /* Padding for inputs */
+  border: 1px solid #fff; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  font-size: 1rem; /* Font size for inputs */
+  transition: all 0.3s ease; /* Smooth transition for focus effect */
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
-  background-color: rgba(255, 255, 255, 0.5);
-  outline: none;
-  border-color: #ffa38d;
+  background-color: rgba(255, 255, 255, 0.5); /* Change background on focus */
+  outline: none; /* Remove outline */
+  border-color: #ffa38d; /* Change border color on focus */
 }
 
 .contact-section button {
-  padding: 0.7rem 8rem;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #333;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 0.7rem 8rem; /* Padding for button */
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+  color: #333; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
 .contact-section button:hover {
-  background-color: #333;
-  color: #ffa38d;
-  transform: scale(1.05);
+  background-color: #333; /* Dark background on hover */
+  color: #ffa38d; /* Change text color on hover */
+  transform: scale(1.05); /* Scale up on hover */
 }
+
 /* Contact Section Animations */
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Start transparent */
+    transform: translateY(20px); /* Start lower */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* End fully visible */
+    transform: translateY(0); /* End at original position */
   }
 }
 
-
-
-
-
-/* this part of my css is for my projects section 
-where my avata.js and Solarsystem.js is rendered */
-
+/* Projects Section */
 .projects-section {
-  background: linear-gradient(200deg, #1e1e1e, #9c9c9c, #1e1e1e);
-  padding: 2rem;
-  color: #ffa38d;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(200deg, #1e1e1e, #9c9c9c, #1e1e1e); /* Gradient background */
+  padding: 2rem; /* Padding for section */
+  color: #ffa38d; /* Text color */
+  text-align: center; /* Center text */
+  position: relative; /* Positioning context */
+  overflow: hidden; /* Prevent overflow */
 }
 
 .projects-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.1);
-  animation: pulse 20s infinite;
-  z-index: 0;
+  content: ''; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Full width */
+  bottom: 0; /* Full height */
+  background: rgba(0, 0, 0, 0.1); /* Semi-transparent overlay */
+  animation: pulse 20s infinite; /* Infinite pulse animation */
+  z-index: 0; /* Below other content */
 }
 
 @keyframes pulse {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1); /* Original size */
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Slightly enlarge */
   }
 }
 
 .projects-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: 'Bitter', serif;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px #ffa38d; /* Glow effect */
+  font-size: 2.5rem; /* Font size for section title */
+  margin-bottom: 2rem; /* Margin below title */
+  font-family: 'Bitter', serif; /* Set font family */
+  text-transform: uppercase; /* Uppercase text */
+  text-shadow: 0 0 10px #ffa38d; /* Glow effect for text */
 }
 
 .project-box {
-  background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  margin: 20px;
-  padding: 20px;
-  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+  background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Border style */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px; /* Margin around each project box */
+  padding: 20px; /* Padding inside project box */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover */
+  cursor: pointer; /* Change cursor to pointer */
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* Positioning context for children */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
 .project-box:hover {
-  transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 12px 30px rgba(255, 135, 114, 0.7); /* Stronger shadow */
+  transform: scale(1.05); /* Scale up on hover */
+  background-color: rgba(255, 255, 255, 0.3); /* Change background color on hover */
+  box-shadow: 0 12px 30px rgba(255, 135, 114, 0.7); /* Stronger shadow on hover */
 }
 
 .project-details {
-  padding: 1vh 37vh;;
-  transition: max-height 0.4s ease, opacity 0.4s ease;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden; /* Ensure hidden details don't overflow */
+  padding: 1vh 37vh; /* Padding for project details */
+  transition: max-height 0.4s ease, opacity 0.4s ease; /* Smooth transitions for opening */
+  opacity: 0; /* Initially hidden */
+  max-height: 0; /* Initially not displayed */
+  overflow: hidden; /* Prevent overflow when hidden */
 }
 
-.project-details p {
-  display: flex;
-  justify-content: center;
+.project-details p a {
+  display: flex; /* Flexbox layout for anchor */
+  justify-content: center; /* Center anchor */
 }
 
 .project-box.open .project-details {
-  opacity: 1;
-  max-height: 500px;
+  opacity: 1; /* Fully visible when project is open */
+  max-height: 500px; /* Set max height when opened */
 }
 
 .project-details div {
-  width: 75%;
-  height: 450px;
+  width: 100%; /* Full width for details container */
+  height: 450px; /* Set height for details */
 }
 
 .better-a {
-  font-size: 18px;
-  color: #ff8772;
-  text-decoration: none;
-  transition: color 0.3s;
+  font-size: 18px; /* Font size for better links */
+  color: #ff8772; /* Text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .better-a:hover {
-  text-decoration: underline;
-  color: #ffaf80;
+  text-decoration: underline; /* Underline on hover */
+  color: #000000; /* Change color on hover */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* General Styling */
+/* General Styling for About Section */
 .about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  font-family: "Bitter", serif;
-  color: rgba(153, 138, 138, 0.9);
+  max-width: 1200px; /* Maximum width for container */
+  margin: 0 auto; /* Center container */
+  padding: 4rem 2rem; /* Padding for about section */
+  font-family: "Bitter", serif; /* Set font family */
+  color: rgba(153, 138, 138, 0.9); /* Text color */
 }
 
 /* Specialize Section */
 .specialize {
-  margin-bottom: 4rem;
-  text-align: center;
+  margin-bottom: 4rem; /* Margin below specialize section */
+  text-align: center; /* Center text */
 }
 
 .specialize h2 {
-  font-size: 2.5rem;
-  color: #ffa38d;
-  margin-bottom: 1.5rem;
+  font-size: 2.5rem; /* Font size for specialize heading */
+  color: #ffa38d; /* Text color */
+  margin-bottom: 1.5rem; /* Margin below heading */
 }
 
 .specialize p {
-  font-size: 1.3rem;
-  color: rgb(54, 49, 49);
-  margin-bottom: 2rem;
+  font-size: 1.3rem; /* Font size for specialize text */
+  color: rgb(54, 49, 49); /* Text color */
+  margin-bottom: 2rem; /* Margin below text */
 }
 
 .skills-icons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center icons */
+  gap: 2rem; /* Space between icons */
+  flex-wrap: wrap; /* Allow wrapping */
 }
 
 .icon {
-  font-size: 4rem;
-  transition: transform 0.3s ease, color 0.3s ease;
-  color: #ffa38d;
+  font-size: 4rem; /* Font size for icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+  color: #ffa38d; /* Text color */
 }
 
 .icon:hover {
-  transform: scale(1.3) rotate(20deg);
-  color: #ff8772;
+  transform: scale(1.3) rotate(20deg); /* Scale and rotate on hover */
+  color: #ff8772; /* Change color on hover */
 }
 
 /* About Me Section */
 .about-me {
-  background: rgba(41, 40, 40, 0.1);
-  padding: 2rem;
-  border-radius: 10px;
-  margin-top: 4rem;
-  box-shadow: 0 4px 10px rgba(255,135,114, 0.8);
+  background: rgba(41, 40, 40, 0.1); /* Semi-transparent background */
+  padding: 2rem; /* Padding for about me section */
+  border-radius: 10px; /* Rounded corners */
+  margin-top: 4rem; /* Margin above section */
+  box-shadow: 0 4px 10px rgba(255,135,114, 0.8); /* Shadow effect */
 }
 
 .about-me h2 {
-  font-size: 2.5rem;
-  color: #ff8772;
-  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Font size for about me heading */
+  color: #ff8772; /* Text color */
+  margin-bottom: 1rem; /* Margin below heading */
 }
 
 .about-me p {
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: rgb(54, 49, 49);
+  font-size: 1.3rem; /* Font size for about me text */
+  line-height: 1.8; /* Line height for readability */
+  color: rgb(54, 49, 49); /* Text color */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .skills-icons {
-    gap: 1rem;
+    gap: 1rem; /* Reduce gap on small screens */
   }
   
   .icon {
-    font-size: 3rem;
+    font-size: 3rem; /* Smaller icon size */
   }
 
   .about-me, .specialize {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Reduce padding on small screens */
   }
 }
