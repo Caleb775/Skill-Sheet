@@ -7,7 +7,6 @@
   font-style: normal; /* Set font style to normal */
   background: linear-gradient(135deg, #1e1e1e, #ffffff, #1e1e1e); /* Create a gradient background */
   color: rgb(54, 49, 49);  /* Text color */
-  /* Set text color */
   min-height: 100vh; /* Ensure minimum height fills the viewport */
   position: relative; /* Positioning context for absolutely positioned elements */
 }
