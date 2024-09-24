@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9c73dc1.css",
-    "main.js": "/static/js/main.49f08cb2.js",
-    "static/js/824.f32bd426.chunk.js": "/static/js/824.f32bd426.chunk.js",
-    "static/js/851.65638592.chunk.js": "/static/js/851.65638592.chunk.js",
-    "static/js/453.05aeaf3d.chunk.js": "/static/js/453.05aeaf3d.chunk.js",
-    "static/js/408.dc6178f0.chunk.js": "/static/js/408.dc6178f0.chunk.js",
-    "static/media/programmer.svg": "/static/media/programmer.38f1555dea695df97677.svg",
-    "static/media/reacti.svg": "/static/media/reacti.a5b5a7c00680064aaafff17187de5e64.svg",
-    "static/media/Api.svg": "/static/media/Api.73060490d6418948a0351b0f7986c88e.svg",
-    "static/media/Web-dev.svg": "/static/media/Web-dev.0b3f7cffff8b9f9cf8d48e7ec7451086.svg",
-    "index.html": "/index.html",
-    "main.e9c73dc1.css.map": "/static/css/main.e9c73dc1.css.map",
-    "main.49f08cb2.js.map": "/static/js/main.49f08cb2.js.map",
-    "824.f32bd426.chunk.js.map": "/static/js/824.f32bd426.chunk.js.map",
-    "851.65638592.chunk.js.map": "/static/js/851.65638592.chunk.js.map",
-    "453.05aeaf3d.chunk.js.map": "/static/js/453.05aeaf3d.chunk.js.map",
-    "408.dc6178f0.chunk.js.map": "/static/js/408.dc6178f0.chunk.js.map"
+    "main.css": "/Skill-Sheet/static/css/main.2d9692cf.css",
+    "main.js": "/Skill-Sheet/static/js/main.f59073c3.js",
+    "static/js/824.f32bd426.chunk.js": "/Skill-Sheet/static/js/824.f32bd426.chunk.js",
+    "static/js/851.65638592.chunk.js": "/Skill-Sheet/static/js/851.65638592.chunk.js",
+    "static/js/453.05aeaf3d.chunk.js": "/Skill-Sheet/static/js/453.05aeaf3d.chunk.js",
+    "static/js/408.dc6178f0.chunk.js": "/Skill-Sheet/static/js/408.dc6178f0.chunk.js",
+    "static/media/programmer.svg": "/Skill-Sheet/static/media/programmer.38f1555dea695df97677.svg",
+    "static/media/reacti.svg": "/Skill-Sheet/static/media/reacti.a5b5a7c00680064aaafff17187de5e64.svg",
+    "static/media/Api.svg": "/Skill-Sheet/static/media/Api.73060490d6418948a0351b0f7986c88e.svg",
+    "static/media/Web-dev.svg": "/Skill-Sheet/static/media/Web-dev.0b3f7cffff8b9f9cf8d48e7ec7451086.svg",
+    "index.html": "/Skill-Sheet/index.html",
+    "main.2d9692cf.css.map": "/Skill-Sheet/static/css/main.2d9692cf.css.map",
+    "main.f59073c3.js.map": "/Skill-Sheet/static/js/main.f59073c3.js.map",
+    "824.f32bd426.chunk.js.map": "/Skill-Sheet/static/js/824.f32bd426.chunk.js.map",
+    "851.65638592.chunk.js.map": "/Skill-Sheet/static/js/851.65638592.chunk.js.map",
+    "453.05aeaf3d.chunk.js.map": "/Skill-Sheet/static/js/453.05aeaf3d.chunk.js.map",
+    "408.dc6178f0.chunk.js.map": "/Skill-Sheet/static/js/408.dc6178f0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9c73dc1.css",
-    "static/js/main.49f08cb2.js"
+    "static/css/main.2d9692cf.css",
+    "static/js/main.f59073c3.js"
   ]
 }
